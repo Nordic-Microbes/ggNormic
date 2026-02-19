@@ -3,7 +3,7 @@
 \docType{data}
 \name{normic_colors}
 \alias{normic_colors}
-\title{Nordic Microbes A/S official colors}
+\title{Nordic microbes A/S official colors}
 \format{
 An object of class \code{list} of length 9.
 }
@@ -11,6 +11,6 @@ An object of class \code{list} of length 9.
 normic_colors
 }
 \description{
-A list of continuous and discrete color vectors created from "#609947", "#89b03c", "#c0d441", "#e8a226", "#efc42e", "#725b99", "#9b69aa"
+Nordic microbes A/S official colors
 }
 \keyword{datasets}

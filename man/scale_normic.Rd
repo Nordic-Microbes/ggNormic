@@ -8,19 +8,19 @@
 \alias{scale_fill_normic_c}
 \alias{scale_color_normic_d}
 \alias{scale_color_normic_c}
-\title{Scales with Nordic Microbes A/S colors}
+\title{Scales with Nordic microbes A/S colors}
 \usage{
-scale_colour_normic_d(palette = "darks_discrete", ..., type = "discrete")
+scale_colour_normic_d(palette = "darks", ..., type = "discrete")
 
-scale_fill_normic_d(palette = "darks_discrete", ..., type = "discrete")
+scale_fill_normic_d(palette = "darks", ..., type = "discrete")
 
-scale_colour_normic_c(palette = "greens_gradient", ..., type = "continuous")
+scale_colour_normic_c(palette = "greens", ..., type = "continuous")
 
-scale_fill_normic_c(palette = "greens_gradient", ..., type = "continuous")
+scale_fill_normic_c(palette = "greens", ..., type = "continuous")
 
-scale_color_normic_d(palette = "darks_discrete", ..., type = "discrete")
+scale_color_normic_d(palette = "darks", ..., type = "discrete")
 
-scale_color_normic_c(palette = "greens_gradient", ..., type = "continuous")
+scale_color_normic_c(palette = "greens", ..., type = "continuous")
 }
 \arguments{
 \item{palette}{A palette from the normic_colors vector}
@@ -33,12 +33,16 @@ scale_color_normic_c(palette = "greens_gradient", ..., type = "continuous")
 a set of aesthetic values to map data values to. The values will be matched in order (usually alphabetical) with the limits of the scale, or with breaks if provided. If this is a paletted vector, then the values will be matched based on the palettes instead. Data values that don't match will be given na.value.
 }
 \description{
-Scales with Nordic Microbes A/S colors
+Scales with Nordic microbes A/S colors
 }
 \examples{
 library(ggplot2)
-df = data.frame(x = c("A", "B", "C", "D", "E", "F", "G"), y = 1:7)
+df = data.frame(x = c("A", "B", "C", "D", "E", "F", "G"), y = 1:7, group = c(rep("yes", 2), rep("no", 3), rep("maybe", 2)))
 ggplot(df, aes(x, y, col = y)) +
  geom_point() +
- scale_color_normic_c("greens_gradient")
+ scale_color_normic_c("greens")
+
+ggplot(df, aes(x, y, col = group)) +
+geom_point() +
+scale_color_normic_d("darks")
 }

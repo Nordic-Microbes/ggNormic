@@ -1,15 +1,33 @@
-#' Nordic Microbes A/S official colors
-#'
-#' A list of continuous and discrete color vectors created from "#609947", "#89b03c", "#c0d441", "#e8a226", "#efc42e", "#725b99", "#9b69aa"
+#' Nordic microbes A/S official colors
 
 normic_colors <- list(
-  greens_gradient = c("#365628", "#578A40", "#6FAF53", "#CFE4C6"),
-  yellows_gradient = c("#8A6E0B", "#D4A810", "#F2CE50", "#FAEBB8"),
-  purples_gradient = c("#56365F", "#7F508D", "#B48EBF", "#DBC9E1"),
-  palette = c("#609947", "#89b03c", "#c0d441", "#e8a226", "#efc42e", "#725b99", "#9b69aa"),
-  greens_compl = c("#609947", "#89b03c", "#c0d441"),
-  yellows_compl = c("#e8a226", "#efc42e"),
-  purples_compl = c("#725b99", "#9b69aa"),
-  darks_discrete = c("#609947", "#e8a226", "#725b99"),
-  lights_discrete = c("#c0d441", "#efc42e", "#9b69aa")
+  greens = c("#006f32", "#70b78d", "#a1d1b3", "#e1efe3"),
+  yellows = c("#ffcd00", "#ffe37e", "#fff0af", "#fffbdc"),
+  purples = c("#946aab", "#c7a6cf", "#e8cae2", "#f2e1f0"),
+  blues = c("#2e5558", "#408688", "#b5ddde", "#e7f4f4"),
+  browns = c("#3e3d33", "#888676", "#bab9b3", "#e1e1df"),
+  reds = c("#e52519", "#f9afbb", "#ffe1e7", "#fef2f6")
+)
+
+normic_colors$darks <- c(
+  normic_colors$greens[[1]],
+  normic_colors$yellows[[1]],
+  normic_colors$purples[[1]],
+  normic_colors$blues[[1]],
+  normic_colors$browns[[1]],
+  normic_colors$reds[[1]]
+)
+
+normic_colors$lights <- c(
+  normic_colors$greens[[2]],
+  normic_colors$yellows[[2]],
+  normic_colors$purples[[2]],
+  normic_colors$blues[[2]],
+  normic_colors$browns[[2]],
+  normic_colors$reds[[2]]
+)
+
+normic_colors$palette <- c(
+  normic_colors$darks,
+  normic_colors$lights
 )

@@ -1,4 +1,4 @@
-#' Scales with Nordic Microbes A/S colors
+#' Scales with Nordic microbes A/S colors
 #'
 #' @param palette A palette from the normic_colors vector
 #' @param ... Arguments to pass on to scale_*_manual
@@ -10,42 +10,53 @@
 #'
 #' @examples
 #' library(ggplot2)
-#' df = data.frame(x = c("A", "B", "C", "D", "E", "F", "G"), y = 1:7)
+#' df = data.frame(x = c("A", "B", "C", "D", "E", "F", "G"), y = 1:7, group = c(rep("yes", 2), rep("no", 3), rep("maybe", 2)))
 #' ggplot(df, aes(x, y, col = y)) +
 #'  geom_point() +
-#'  scale_color_normic_c("greens_gradient")
-
+#'  scale_color_normic_c("greens")
+#'
+#' ggplot(df, aes(x, y, col = group)) +
+#' geom_point() +
+#' scale_color_normic_d("darks")
 
 #' @rdname scale_normic
 #'
 #' @export
-scale_colour_normic_d = function(palette = "darks_discrete", ..., type = "discrete") {
-  ggplot2::scale_colour_manual(values = normic_palettes(palette,
-                                                        type = "discrete"), ...)
+scale_colour_normic_d = function(palette = "darks", ..., type = "discrete") {
+  ggplot2::scale_colour_manual(
+    values = normic_palettes(palette, type = "discrete"),
+    ...
+  )
 }
 
 #' @rdname scale_normic
 #'
 #' @export
-scale_fill_normic_d = function(palette = "darks_discrete", ..., type = "discrete") {
-  ggplot2::scale_fill_manual(values = normic_palettes(palette,
-                                                      type = "discrete"), ...)
+scale_fill_normic_d = function(palette = "darks", ..., type = "discrete") {
+  ggplot2::scale_fill_manual(
+    values = normic_palettes(palette, type = "discrete"),
+    ...
+  )
 }
 
 #' @rdname scale_normic
 #'
 #' @export
-scale_colour_normic_c = function(palette = "greens_gradient", ..., type = "continuous") {
-  ggplot2::scale_colour_gradientn(colours = normic_palettes(palette,
-                                                            type = "continuous"), ...)
+scale_colour_normic_c = function(palette = "greens", ..., type = "continuous") {
+  ggplot2::scale_colour_gradientn(
+    colours = normic_palettes(palette, type = "continuous"),
+    ...
+  )
 }
 
 #' @rdname scale_normic
 #'
 #' @export
-scale_fill_normic_c = function(palette = "greens_gradient", ..., type = "continuous") {
-  ggplot2::scale_fill_gradientn(colours = normic_palettes(palette,
-                                                          type = "continuous"), ...)
+scale_fill_normic_c = function(palette = "greens", ..., type = "continuous") {
+  ggplot2::scale_fill_gradientn(
+    colours = normic_palettes(palette, type = "continuous"),
+    ...
+  )
 }
 
 #' @rdname scale_normic

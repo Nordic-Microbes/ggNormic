@@ -1,14 +1,14 @@
 Package: NormicPalettes
 Type: Package
 Title: ggplot2 color palettes for the company Nordic Microbes
-Version: 0.1.0
+Version: 0.2.0
 Author: Mark Lyng
-Maintainer: Mark Lyng <ml@bioomix.com>
-Description: Wrappers around scale_*_manual for continuous (c) and discrete (d) scales of ggplot2. Includes the official company colors of Nordic Microbes A/S
+Maintainer: Mark Lyng <ml@nordicmicrobes.dk>
+Description: Wrappers around scale_*_manual for continuous (c) and discrete (d) scales of ggplot2. Includes the official company colors of Nordic microbes A/S
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
 URL: https://github.com/marklyng/NormicPalettes
 BugReports: https://github.com/marklyng/NormicPalettes/issues
 Imports: 

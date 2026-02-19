@@ -27,5 +27,5 @@ A palette object
 Create palette from normic_colors
 }
 \examples{
-normic_palettes("greens_gradient")
+normic_palettes("greens")
 }
