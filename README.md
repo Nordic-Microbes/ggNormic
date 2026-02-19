@@ -1,13 +1,13 @@
 # Description
- A package for using Nordic Microbes A/S colors in ggplot2 scales
+ A package for modifying ggplot2 objects to fit the sylte of Nordic microbes A/S
 # Installation: 
 ```
-devtools::install_github("marklyng/NormicPalettes")
+devtools::install_github("Nordic-Microbes/ggNormic")
 ```
 
 ## See all the color palettes:
 ```
-NormicPalettes::normic_colors
+ggNormic::normic_colors
 ```
 
 # Usage:
@@ -18,12 +18,14 @@ df <- tibble(x = LETTERS[seq(6)],
              y = seq(6))
 df
 
-ggplot(df, aes(x, y, col = y)) +
-    geom_point() +
-    NormicPalettes::scale_color_normic_c()
+p <- ggplot(df, aes(x, y, col = y)) +
+    geom_point() 
+
+p + ggNormic::scale_color_normic_c()
 
 
-ggplot(df, aes(x, y, col = x)) +
-    geom_point() +
-    NormicPalettes::scale_color_normic_d("palette")
+q <- p + ggNormic::scale_color_normic_d("palette")
+
+q + ggNormic::theme_normic(base_size = 15, panel_border = T)
+
 ```
